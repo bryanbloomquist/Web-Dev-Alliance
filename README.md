@@ -1,52 +1,48 @@
-# Web-Dev-Alliance
-Project 2
+# Choose Your Own Adventure
 
-# Project Description
-The application is a create-your-own-adventure-style game with coding bootcamp/academic theme.  We wanted to create a basic text-based game where users could create an account complete with password and input validation.  The game would consist of a series of questions, where the user's answer to the question would determine how their score and stress levels change, indicated by gauges.
 
-# Deployed App:
-https://cyoa-bc.herokuapp.com/
+Deployed App: [cyoa-bc.herokuapp.com](https://cyoa-bc.herokuapp.com)
 
-# https://docs.google.com/presentation/d/1XN0RQEjUMF6HD9x8cIKy_Av5s_HEhqDan5qWo6zUXkc/edit?usp=sharing
 
-# Technologies Used
-* HTML
-* CSS
-* Bootstrap
-* Javascript
-* jQuery
-* Node.js
-* Express.js
-* Express-validate
-* Sequelize.js
-* bcryptjs
-* MySQL
-* Heroku
-* JawsDB
-* Gauge.js
+## Project Description
 
-# Roles
-## Project Manager/Concept:
-* Scott
 
-## Front End:
-* Bryan
-* Ashlen
+This application is a Choose Your Own Adventure style game with a coding boot camp/academic theme.  The user creates an account complete with password and input validation.  The game consists of a series of questions, where the user's answer to the question would determine how their score and stress levels change, indicated by gauges.  When the game is over the score is logged to the MySQL database and a scoreboard showing the top 10 players is revealed.
 
-## Back End:
-* John
-* Steve
-* Scott
-* Ashlen
 
-## Database:
-* John
-* Steve
+## Technologies Used
 
-# MVC/Requirements:
-* Question-based game
-* Backed by MySQL
-* Backed by Sequelize or another similar ORM
-* New Technology
-* Polished Front-End UI
-* Good coding standards (indentations, variable names (i.e camelCase))
+
+* HTML, CSS, Bootstrap, Javascript, jQuery, Node.js, Express.js, Express-validate, Sequelize.js, bcryptjs, MySQL, Heroku, JawsDB, and Gauge.js
+
+
+## Roles
+
+
+* Scott (Project Manager, Concept, Back End)
+
+* Bryan (Front End Design and Development, Media Responsiveness)
+
+* Steve (Back End, Database)
+
+* Ashlen (Front End Development, Back End)
+
+* John (Back End, Database)
+
+
+## Login Page
+
+
+![Screenshot](./images/s1.png)
+
+
+## Game Page
+
+
+![Screenshot](./images/s2.png)
+
+
+## Scoreboard
+
+
+![Screenshot](./images/s3.png)
