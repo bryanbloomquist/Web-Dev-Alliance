@@ -107,9 +107,7 @@ $(document).ready(function() {
           case "A":
             outcome = Math.floor(Math.random() * 2);
             if (outcome === 0) {
-              $(".questionMsg").html(
-                "The snow was too deep. You didn't make it to class."
-              );
+              $(".questionMsg").html("The snow was too deep. You didn't make it to class.");
               $("#questionFlavor").html(`
                 ${divContainer(54)}<img src='images/giphy/2a-bill-murray.gif' class='gif' alt='bill murray gif'></div>
               `);
@@ -118,9 +116,7 @@ $(document).ready(function() {
               $("#grade").val(score);
               gauge.set(stress);
             } else {
-              $(".questionMsg").html(
-                "Through sheer ingenuity, you made it to class."
-              );
+              $(".questionMsg").html("Through sheer ingenuity, you made it to class.");
               $("#questionFlavor").html(`
                 ${divContainer(56)}<img src='images/giphy/2b-road-skiing.gif' class='gif' alt='road skiing gif'></div>
               `);
@@ -133,9 +129,7 @@ $(document).ready(function() {
           case "B":
             outcome = Math.floor(Math.random() * 4);
             if (outcome === 0) {
-              $(".questionMsg").html(
-                "Just as class begins, your internet goes out."
-              );
+              $(".questionMsg").html("Just as class begins, your internet goes out.");
               $("#questionFlavor").html(`
                 ${divContainer(52)}<img src='images/giphy/2c-confused.gif' class='gif' alt='confused gif'></div>
               `);
@@ -190,9 +184,7 @@ $(document).ready(function() {
           case "A":
             outcome = Math.floor(Math.random() * 4);
             if (outcome === 0) {
-              $(".questionMsg").html(
-                "It was, surprisingly, a smashing success!"
-              );
+              $(".questionMsg").html("It was, surprisingly, a smashing success!");
               $("#questionFlavor").html(`
                 ${divContainer(56)}<img src="images/giphy/3a-code-monkey.gif" class="gif" alt="coding monkey gif"></div>
               `);
@@ -214,9 +206,7 @@ $(document).ready(function() {
           case "B":
             outcome = Math.floor(Math.random() * 4);
             if (outcome === 0) {
-              $(".questionMsg").html(
-                "Try as you might, your app simply didn't work. Good effort."
-              );
+              $(".questionMsg").html("Try as you might, your app simply didn't work. Good effort.");
               $("#questionFlavor").html(`
                 ${divContainer(100)}<img src="images/giphy/3c-reality.gif" class="gif" alt="planned vs reality gif"></div>
               `);
@@ -225,9 +215,7 @@ $(document).ready(function() {
               $("#grade").val(score);
               gauge.set(stress);
             } else {
-              $(".questionMsg").html(
-                "Your project was a success. Everyone contributed, dividing the work."
-              );
+              $(".questionMsg").html("Your project was a success. Everyone contributed, dividing the work.");
               $("#questionFlavor").html(`
                 ${divContainer(73)}<img src="images/giphy/3d-teamwork.gif" class="gif" alt="yay teamwork gif"></div>
               `);
@@ -240,9 +228,7 @@ $(document).ready(function() {
           case "C":
             outcome = Math.floor(Math.random() * 4);
             if (outcome === 0) {
-              $(".questionMsg").html(
-                "Somehow you skated by and got an A despite contributing virtually nothing."
-              );
+              $(".questionMsg").html("Somehow you skated by and got an A despite contributing virtually nothing.");
               $("#questionFlavor").html(`
                 ${divContainer(56)}<img src="images/giphy/3e-office-space.gif" class="gif" alt="office space gif"></div>
               `);
@@ -251,9 +237,7 @@ $(document).ready(function() {
               $("#grade").val(score);
               gauge.set(stress);
             } else {
-              $(".questionMsg").html(
-                "Your group caught on to your laziness and your name was left off of the final product."
-              );
+              $(".questionMsg").html("Your group caught on to your laziness and your name was left off of the final product.");
               $("#questionFlavor").html(`
                 ${divContainer(75)}<img src="images/giphy/3f-looney-toons.gif" class="gif" alt="looney toons gif"></div>
               `);
@@ -278,7 +262,7 @@ $(document).ready(function() {
       loseConditions();
       $(".currentQuestion").html(`
         <h4 class="question">You recieve a cold-call from a recruiter!</h4>
-        <button id="A"${mfb}>I call them back immediately and introduce myself.</button><br />
+        <button id="A" ${mfb}>I call them back immediately and introduce myself.</button><br />
         <button id="B" ${mfb}>I'll send an email. That should be good enough.</button><br />
         <button id="C" ${mfb}>Ignore it. I'm not ready.
       `);
@@ -286,9 +270,7 @@ $(document).ready(function() {
         const userChoice = this.id;
         switch (userChoice) {
           case "A":
-            $(".questionMsg").html(
-              "They asked some difficult questions, but in the end you got your name out there."
-            );
+            $(".questionMsg").html("They asked some difficult questions, but in the end you got your name out there.");
             $("#questionFlavor").html(`
               ${divContainer(56)}<img src="images/giphy/4a-southpark.gif" class="gif" alt="soutpark gif"></div>
             `);
@@ -298,9 +280,7 @@ $(document).ready(function() {
             gauge.set(stress);
             break;
           case "B":
-            $(".questionMsg").html(
-              "You recieve a form letter thanking you for your inquery."
-            );
+            $(".questionMsg").html("You recieve a form letter thanking you for your inquery.");
             $("#questionFlavor").html(`
               ${divContainer(75)}<img src="images/giphy/4b-spongebob.gif" class="gif" alt="spongebob gif"></div>
             `);
@@ -349,43 +329,7 @@ $(document).ready(function() {
         gauge.set(stress);
         question++;
       });
-      $("#meta").click(function() {
-        $("#questionModal").modal("show");
-        $(".questionMsg").html("WRONG!");
-        $("#questionFlavor").html(`
-          ${divContainer(56)}<img src="images/giphy/5b-hells-kitchen.gif" class="gif" alt="hells kitchen gif"></div>
-        `);
-        score -= 5;
-        stress -= 5;
-        $("#grade").val(score);
-        gauge.set(stress);
-        question++;
-      });
-      $("#no-end").click(function() {
-        $("#questionModal").modal("show");
-        $(".questionMsg").html("WRONG!");
-        $("#questionFlavor").html(`
-          ${divContainer(56)}<img src="images/giphy/5b-hells-kitchen.gif" class="gif" alt="hells kitchen gif"></div>
-        `);
-        score -= 5;
-        stress -= 5;
-        $("#grade").val(score);
-        gauge.set(stress);
-        question++;
-      });
-      $("#span").click(function() {
-        $("#questionModal").modal("show");
-        $(".questionMsg").html("WRONG!");
-        $("#questionFlavor").html(`
-          ${divContainer(56)}<img src="images/giphy/5b-hells-kitchen.gif" class="gif" alt="hells kitchen gif"></div>
-        `);
-        score -= 5;
-        stress -= 5;
-        $("#grade").val(score);
-        gauge.set(stress);
-        question++;
-      });
-      $("#source").click(function() {
+      $("#meta, #no-end, #span, #source").click(function() {
         $("#questionModal").modal("show");
         $(".questionMsg").html("WRONG!");
         $("#questionFlavor").html(`
@@ -405,83 +349,54 @@ $(document).ready(function() {
 
     function question6() {
       loseConditions();
-      $(".currentQuestion").html('<h4 class="question">You have dysentery.');
-      $(".currentQuestion").append(
-        '<button id="A" class="answer btn" data-toggle="modal" data-target="#questionModal" data-backdrop="static" data-keyboard="false">I&apos;ll go to the doctor, even though it means missing class'
-      );
-      $(".currentQuestion").append(
-        '<br><button id="B" class="answer btn" data-toggle="modal" data-target="#questionModal" data-backdrop="static" data-keyboard="false">Tough it out and go to class. I can&apos;t miss a day'
-      );
-      $(".currentQuestion").append(
-        '<br><button id="C" class="answer btn" data-toggle="modal" data-target="#questionModal" data-backdrop="static" data-keyboard="false">Ignore it and go for a journey somewhere in the pacific northwest'
-      );
+      $(".currentQuestion").html(`
+        <h4 class="question">You have dysentery.</h4>
+        <button id="A" ${mfb}>I'll go to the doctor, even though it means missing class</button><br />
+        <button id="B" ${mfb}>Tough it out and go to class. I can't miss a day</button><br />
+        <button id="C" ${mfb}>Ignore it and go for a journey somewhere in the pacific northwest
+      `);
       $(".answer").click(function() {
-        var userChoice = this.id;
-        console.log(userChoice);
+        const userChoice = this.id;
+        let outcome;
         switch (userChoice) {
           case "A":
-            console.log("You only missed 1 class and you're right as rain");
-            $(".questionMsg").html(
-              "You only missed 1 class and you're right as rain."
-            );
-            $("#questionFlavor").html(
-              '<div style="width:100%;height:0;padding-bottom:69%;position:relative;"><iframe src="https://giphy.com/embed/3o7TKKxsoUjRiUUeas"' +
-                gliphyEmbed +
-                '"https://giphy.com/gifs/hulu-parks-and-recreation-nbc-3o7TKKxsoUjRiUUeas"></a>'
-            );
+            $(".questionMsg").html("You only missed 1 class and you're right as rain.");
+            $("#questionFlavor").html(`
+              ${divContainer(69)}<img src="images/giphy/6a-thumbs-up.gif" class="gif" alt="hospital bed thumbs up gif"></div>
+            `);
             score -= 5;
             stress -= 10;
             $("#grade").val(score);
             gauge.set(stress);
-            console.log(score);
-            console.log(stress);
             $("#questionModalNext").click(function() {
               saveScore();
               findQuestion();
             });
             break;
           case "B":
-            var outcome = Math.floor(Math.random() * 2);
+            outcome = Math.floor(Math.random() * 2);
             if (outcome === 0) {
-              console.log(
-                "You over-exerted yourself and had to be hospitalized, missing 3 classes"
-              );
-              $(".questionMsg").html(
-                "You over-exerted yourself and had to be hospitalized, missing 3 classes."
-              );
-              $("#questionFlavor").html(
-                '<div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe src="https://giphy.com/embed/PADZOft6ursY"' +
-                  gliphyEmbed +
-                  '"https://giphy.com/gifs/funny-omfg-PADZOft6ursY"></a>'
-              );
+              $(".questionMsg").html("You over-exerted yourself and had to be hospitalized, missing 3 classes.");
+              $("#questionFlavor").html(`
+                ${divContainer(50)}<img src="images/giphy/6b-dumber.gif" class="gif" alt="dumb and dumber toilet error gif"></div>
+              `);
               score -= 10;
               stress += 15;
               $("#grade").val(score);
               gauge.set(stress);
-              console.log(score);
-              console.log(stress);
               $("#questionModalNext").click(function() {
                 saveScore();
                 findQuestion();
               });
             } else {
-              console.log(
-                "You managed to stay hydrated and made it through class."
-              );
-              $(".questionMsg").html(
-                "You managed to stay hydrated and made it through class."
-              );
-              $("#questionFlavor").html(
-                '<div style="width:100%;height:0;padding-bottom:67%;position:relative;"><iframe src="https://giphy.com/embed/Djk9ilQA2jjOg"' +
-                  gliphyEmbed +
-                  '"https://giphy.com/gifs/Djk9ilQA2jjOg"></a>'
-              );
+              $(".questionMsg").html("You managed to stay hydrated and made it through class.");
+              $("#questionFlavor").html(`
+                ${divContainer(67)}<img src="images/giphy/6c-goodman.gif" class="gif" alt="john goodman struggling gif"></div>
+              `);
               score += 10;
               stress += 5;
               $("#grade").val(score);
               gauge.set(stress);
-              console.log(score);
-              console.log(stress);
               $("#questionModalNext").click(function() {
                 saveScore();
                 findQuestion();
@@ -490,12 +405,9 @@ $(document).ready(function() {
             break;
           case "C":
             $(".questionMsg").html("You have died of dysentery.");
-            $("#questionFlavor").html(
-              '<div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/3oz8xBKJFKAXB6JAm4"' +
-                gliphyEmbed +
-                '"https://giphy.com/gifs/oregon-wagon-trail-3oz8xBKJFKAXB6JAm4"></a><'
-            );
-            console.log("You have died of dysentery");
+            $("#questionFlavor").html(`
+              ${divContainer(75)}<img src="images/giphy/6d-oregon-trail.gif" class="gif" alt"oregon trail game over gif"><div>
+            `);
             score = -1;
             stress = -1;
             $("#grade").val(score);
@@ -503,6 +415,9 @@ $(document).ready(function() {
             $("#questionModalNext").click(function() {
               finalscore();
             });
+            break;
+          default:
+            break;
         }
         question++;
       });
@@ -510,68 +425,46 @@ $(document).ready(function() {
 
     function question7() {
       loseConditions();
-      $(".currentQuestion").html(
-        '<h4 class="question">It&apos;s spring break. How do you spend your free time?'
-      );
-      $(".currentQuestion").append(
-        '<button id="A"' + mfb + "Teach myself PHP and C# on the side!"
-      );
-      $(".currentQuestion").append(
-        '<br><button id="B"' +
-          mfb +
-          "Get caught up with class material and polish my portfolio."
-      );
-      $(".currentQuestion").append(
-        '<br><button id="C"' + mfb + "Daytona Beach here I come!"
-      );
+      $(".currentQuestion").html(`
+        <h4 class="question">It's spring break. How do you spend your free time?</h4>
+        <button id="A" ${mfb}>Teach myself PHP and C# on the side!</button><br />
+        <button id="B" ${mfb}>Get caught up with class material and polish my portfolio.</button><br />
+        <button id="C" ${mfb}>Daytona Beach here I come!</button>
+      `);
       $(".answer").click(function() {
-        var userChoice = this.id;
-        console.log(userChoice);
+        const userChoice = this.id;
         switch (userChoice) {
           case "A":
-            console.log("You are a coding ninja.");
             $(".questionMsg").html("You are a coding ninja.");
-            $("#questionFlavor").html(
-              '<div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/ukMiDlCmdv2og"' +
-                gliphyEmbed +
-                '"https://giphy.com/gifs/life-programmer-ukMiDlCmdv2og"></a>'
-            );
+            $("#questionFlavor").html(`
+              ${divContainer(75)}<img src="images/giphy/7a-programmer.gif" class="gif" alt="programmer gif"></div>
+            `);
             score += 15;
             stress += 15;
             $("#grade").val(score);
             gauge.set(stress);
             break;
           case "B":
-            console.log("Everything is looking pretty polished now.");
-            $(".questionMsg").html(
-              "Everything is looking pretty polished now."
-            );
-            $("#questionFlavor").html(
-              '<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/l2SpNQjFsQqH5kFva"' +
-                gliphyEmbed +
-                '"https://giphy.com/gifs/middle-school-movie-janitor-middle-school-movie-l2SpNQjFsQqH5kFva"></a>'
-            );
+            $(".questionMsg").html("Everything is looking pretty polished now.");
+            $("#questionFlavor").html(`
+              ${divContainer(56)}<img src="images/giphy/7b-janitor.gif" class="gif" alt="janitor awakening gif"><dif>
+            `);
             score += 5;
             stress += 5;
             $("#grade").val(score);
             gauge.set(stress);
             break;
           case "C":
-            console.log(
-              "Well that certainly was fun. You'll be picking sand out of your belly button for weeks."
-            );
-            $(".questionMsg").html(
-              "Well that certainly was fun. You'll be picking sand out of your belly button for weeks."
-            );
-            $("#questionFlavor").html(
-              '<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/43ZlfLDPwxJLi"' +
-                gliphyEmbed +
-                '"https://giphy.com/gifs/fail-beach-lmao-43ZlfLDPwxJLi"></a>'
-            );
+            $(".questionMsg").html("Well that certainly was fun. You'll be picking sand out of your belly button for weeks.");
+            $("#questionFlavor").html(`
+              ${divContainer(56)}<img src="images/giphy/7c-beach-fail.gif" class="gif" alt="beach flop gif"></div>
+            `);
             score -= 10;
             stress -= 15;
             $("#grade").val(score);
             gauge.set(stress);
+            break;
+          default:
             break;
         }
         question++;
@@ -584,76 +477,46 @@ $(document).ready(function() {
 
     function question8() {
       loseConditions();
-      $(".currentQuestion").html(
-        '<h4 class="question">It&apos;s time for your final project!'
-      );
-      $(".currentQuestion").append(
-        '<button id="A"' +
-          mfb +
-          "This is my moment! I quit my job, send the kids to boarding school; this is my life now!"
-      );
-      $(".currentQuestion").append(
-        '<br><button id="B"' +
-          mfb +
-          "This is just another assignment. I got this."
-      );
-      $(".currentQuestion").append(
-        '<br><button id="C"' + mfb + "I&apos;m burnt-out. I need a break."
-      );
+      $(".currentQuestion").html(`
+        <h4 class="question">It's time for your final project!</h4>
+        <button id="A" ${mfb}>This is my moment! I quit my job, send the kids to boarding school; this is my life now!</button><br />
+        <button id="B" ${mfb}>This is just another assignment. I got this.</button><br />
+        <button id="C" ${mfb}>I'm burnt-out. I need a break.</button>
+      `);
       $(".answer").click(function() {
-        var userChoice = this.id;
-        console.log(userChoice);
+        const userChoice = this.id;
         switch (userChoice) {
           case "A":
-            console.log(
-              "You worked your butt off, but your final project is a masterpiece"
-            );
-            $(".questionMsg").html(
-              "You worked your butt off, but your final project is a masterpiece."
-            );
-            $("#questionFlavor").html(
-              '<div style="width:100%;height:0;padding-bottom:76%;position:relative;"><iframe src="https://giphy.com/embed/xT5LMSleuVuCe24KLC"' +
-                gliphyEmbed +
-                '"https://giphy.com/gifs/season-7-the-simpsons-7x7-xT5LMSleuVuCe24KLC"></a>'
-            );
+            $(".questionMsg").html("You worked your butt off, but your final project is a masterpiece.");
+            $("#questionFlavor").html(`
+              ${divContainer(76)}<img src="images/giphy/8a-homer-run.gif" class="gif" alt="homer running gif"></div>
+            `);
             score += 20;
             stress += 20;
             $("#grade").val(score);
             gauge.set(stress);
             break;
           case "B":
-            console.log(
-              "Your final project functions and looks pretty good. Good work."
-            );
-            $(".questionMsg").html(
-              "Your final project functions and looks pretty good. Good work."
-            );
-            $("#questionFlavor").html(
-              '<div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/QRB6F0x3ptYHu"' +
-                gliphyEmbed +
-                '"https://giphy.com/gifs/day-work-home-QRB6F0x3ptYHu"></a>'
-            );
+            $(".questionMsg").html("Your final project functions and looks pretty good. Good work.");
+            $("#questionFlavor").html(`
+              ${divContainer(75)}<img src="images/giphy/8b-homer-broom.gif" class="gif" alt="homer being lazy gif"></div>
+            `);
             score += 10;
             stress += 10;
             $("#grade").val(score);
             gauge.set(stress);
             break;
           case "C":
-            console.log(
-              "You recieve a zero for this assignment, lowering your final grade."
-            );
-            $(".questionMsg").html(
-              "You recieve a zero for this assignment, lowering your final grade."
-            );
-            $("#questionFlavor").html(
-              '<div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/8EmeieJAGjvUI"' +
-                gliphyEmbed +
-                '"https://giphy.com/gifs/work-homer-simpson-8EmeieJAGjvUI"></a>'
-            );
+            $(".questionMsg").html("You recieve a zero for this assignment, lowering your final grade.");
+            $("#questionFlavor").html(`
+              ${divContainer(75)}<img src="images/giphy/8c-homer-bucket.gif" class="gif" alt="homer water bucket gif"></div>
+            `);
             score -= 5;
             stress -= 5;
             $("#grade").val(score);
             gauge.set(stress);
+            break;
+          default:
             break;
         }
         question++;
@@ -665,7 +528,6 @@ $(document).ready(function() {
     }
 
     function finalscore() {
-      // saveScoreFinal();
       window.location.href = "/scoreboard";
     }
 
@@ -675,24 +537,21 @@ $(document).ready(function() {
       $("#stress-display").html(stress);
       $("#grade-display").html(score);
 
-      var data = {
+      let data = {
         currentScore: score,
         currentStress: stress,
         currentQuestionId: question
       };
-      console.log(data);
       $.ajax({
         method: "PUT",
         url: "/api/users/" + user,
         data: data
-      }).then(function(result) {
-        console.log(result);
-      });
+      }).then(function(result) {});
     }
 
     function loseConditions() {
       if (score <= 0 || stress >= 50) {
-        window.location.href = "/scoreboard";
+        finalscore();
       }
     }
     //switch will determine where the player starts the game

@@ -76,6 +76,12 @@ hr {
   margin: 1%;
   white-space: normal;
   font-size: 1em;
+  border: 2px solid #a54f18;
+}
+
+.btn:hover {
+  background-color: #222222;
+  color: #ffffff;
 }
 
 .question {
@@ -157,6 +163,13 @@ meter {
 .modal-content {
   background-color: slategray;
 }
+
+#questionModalNext {
+  border: 2px solid #ffffff;
+  padding: 10px;
+  background-color: #cccccc;
+}
+
 .gold{
   color: #f7e27b;
 }
